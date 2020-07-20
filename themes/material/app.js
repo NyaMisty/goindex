@@ -114,8 +114,8 @@ function nav(path) {
       arr.shift();
       for (i in arr) {
         var n = arr[i];
+	p += n + '/';
         n = decodeURI(n);
-        p += n + '/';
         if (n == '') {
           break;
         }
@@ -329,7 +329,7 @@ function append_files_to_list(path, files) {
   let targetFiles = [];
   for (i in files) {
     var item = files[i];
-    var p = path + item.name + '/';
+    var p = path + encodeURIComponent(item.name) + '/';
     if (item['size'] == undefined) {
       item['size'] = "";
     }
@@ -347,7 +347,7 @@ function append_files_to_list(path, files) {
 	            </a>
 	        </li>`;
     } else {
-      var p = path + item.name;
+      var p = path + encodeURIComponent(item.name);
       const filepath = path + item.name;
       var c = "file";
       // 当加载完最后一页后，才显示 README ，否则会影响滚动事件
