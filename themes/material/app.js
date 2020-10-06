@@ -356,11 +356,7 @@ function append_files_to_list(path, files) {
           markdown("#readme_md", data);
         });
       }
-      if (item.name == "HEAD.md") {
-        get_file(p, item, function (data) {
-          markdown("#head_md", data);
-        });
-      }
+      markdown("#head_md", "划水交流群933363822，目前录制了1300+个V的B站/油管/t台直播（2434/holo/vr/upd8/774等都录了，b站粉大于2w5的也都录了）\n\n当天的录播文件夹为vtbrec，每天早上八点前结束的直播算为昨天的直播，请去对应日期的文件夹中寻找\n\n找不到自家的录播可以加群问一下~ 下载较大的录播档或者希望预览的话推荐加群了解另一种访问方式，字幕组想要加速下载请加群联系群主~~");  
       var ext = p.split('.').pop().toLowerCase();
       if ("|html|php|css|go|java|js|json|txt|sh|md|mp4|webm|avi|bmp|jpg|jpeg|png|gif|m4a|mp3|flac|wav|ogg|mpg|mpeg|mkv|rm|rmvb|mov|wmv|asf|ts|flv|pdf|".indexOf(`|${ext}|`) >= 0) {
         targetFiles.push(filepath);
